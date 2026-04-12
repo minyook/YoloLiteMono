@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    전체 화면 카메라 프리뷰 레이아웃
+    - 화면 전체를 PreviewView로 채움
+    - 상단에 상태 텍스트 표시
+    - 화면 어디든 터치하면 탐지 시작/중지
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- CameraX 프리뷰 (전체화면) -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 상태 표시 텍스트 (상단 중앙) -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="48dp"
+        android:text="화면을 터치하면 탐지를 시작합니다"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="#80000000"
+        android:padding="16dp"
+        android:textStyle="bold" />
+
+    <!-- 탐지 결과 오버레이 (바운딩 박스 그리기용) -->
+    <com.example.obstacleavoidance.OverlayView
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

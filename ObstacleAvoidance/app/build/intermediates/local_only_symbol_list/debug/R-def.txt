@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id overlayView
+id previewView
+id rootLayout
+id statusText
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+style Theme.ObstacleAvoidance
